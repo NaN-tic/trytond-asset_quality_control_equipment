@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- quality.proof.method -->
+        <record model="ir.ui.view" id="proof_method_view_form">
+            <field name="model">quality.proof.method</field>
+            <field name="inherit"
+            	ref="quality_control.quality_proof_method_form_view"/>
+            <field name="name">quality_proof_method_form</field>
+        </record>
+
+        <!-- quality.qualitative.template.line -->
+        <record model="ir.ui.view" id="qualitative_template_line_view_form">
+            <field name="model">quality.qualitative.template.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_qualitative_template_line_form_view"/>
+            <field name="name">quality_template_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="qualitative_template_line_view_tree">
+            <field name="model">quality.qualitative.template.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_qualitative_template_line_tree_view"/>
+            <field name="name">quality_line_tree</field>
+        </record>
+
+        <!-- quality.quantitative.template.line -->
+        <record model="ir.ui.view" id="quantitative_template_line_view_form">
+            <field name="model">quality.quantitative.template.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_quantitative_template_line_form_view"/>
+            <field name="name">quality_template_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="quantitative_template_line_view_tree">
+            <field name="model">quality.quantitative.template.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_quantitative_template_line_tree_view"/>
+            <field name="name">quality_line_tree</field>
+        </record>
+
+        <!-- quality.qualitative.test.line -->
+        <record model="ir.ui.view" id="qualitative_test_line_view_form">
+            <field name="model">quality.qualitative.test.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_qualitative_test_line_form_view"/>
+            <field name="name">quality_test_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="qualitative_test_line_view_tree">
+            <field name="model">quality.qualitative.test.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_qualitative_test_line_tree_view"/>
+            <field name="name">quality_line_tree</field>
+        </record>
+
+        <!-- quality.quantitative.test.line -->
+        <record model="ir.ui.view" id="quantitative_test_line_view_form">
+            <field name="model">quality.quantitative.test.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_quantitative_test_line_form_view"/>
+            <field name="name">quality_test_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="quantitative_test_line_view_tree">
+            <field name="model">quality.quantitative.test.line</field>
+            <field name="inherit"
+            	ref="quality_control.quality_quantitative_test_line_tree_view"/>
+            <field name="name">quality_line_tree</field>
+        </record>
+    </data>
+</tryton>

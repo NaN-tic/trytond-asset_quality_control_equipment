@@ -1,0 +1,100 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:asset:"
+msgid ""
+"You cannot delete the next Quality Control Equipments because they are used "
+"in some Quality Control Template: %s"
+msgstr ""
+"No puede eliminar los siguientes Equipos de control de calidad porque se "
+"usan en alguna plantilla de control de calidad: %s"
+
+msgctxt "error:asset:"
+msgid ""
+"You cannot delete the next Quality Control Equipments because they are used "
+"in some Quality Control Test: %s"
+msgstr ""
+"No puede eliminar los siguientes Equipos de control de calidad porque se "
+"usan en algun test de control de calidad: %s"
+
+msgctxt "field:asset,proof_methods:"
+msgid "Quality Proof Methods"
+msgstr "Métodos de prueba de calidad"
+
+msgctxt "field:asset-quality.proof.method,asset:"
+msgid "Asset"
+msgstr "Activo"
+
+msgctxt "field:asset-quality.proof.method,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:asset-quality.proof.method,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:asset-quality.proof.method,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:asset-quality.proof.method,proof_method:"
+msgid "Quality Proof Method"
+msgstr "Método de prueba de calidad"
+
+msgctxt "field:asset-quality.proof.method,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:asset-quality.proof.method,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:asset-quality.proof.method,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:quality.proof.method,equipments:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:quality.qualitative.template.line,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:quality.qualitative.test.line,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:quality.quantitative.template.line,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "field:quality.quantitative.test.line,equipment:"
+msgid "Equipment"
+msgstr "Equipo"
+
+msgctxt "help:asset,proof_methods:"
+msgid "The Quality Proof Methods that can be done with this equipment."
+msgstr ""
+"Los métodos de prueba de calidad que se pueden realizar con este equipo."
+
+msgctxt "help:quality.proof.method,equipments:"
+msgid "The Equipments that can be used to do this proof."
+msgstr "Los equipos que se pueden usar para realizar esta prueba."
+
+msgctxt "model:asset-quality.proof.method,name:"
+msgid "Asset - Quality Proof Method"
+msgstr "Activo - Método de prueba de calidad"
+
+msgctxt "model:ir.action,name:act_asset_quality_control_equipment"
+msgid "Quality Control Equipments"
+msgstr "Equipos control de calidad"
+
+msgctxt "model:ir.ui.menu,name:menu_asset_quality_control_equipment"
+msgid "Quality Control Equipments"
+msgstr "Equipos control de calidad"
+
+msgctxt "selection:asset,type:"
+msgid "Quality Control Equipment"
+msgstr "Equipo control de calidad"
