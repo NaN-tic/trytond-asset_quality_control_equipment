@@ -10,8 +10,8 @@ def register():
         Asset,
         AssetProofMethod,
         ProofMethod,
-        QualitativeTemplateLine,
-        QuantitativeTemplateLine,
-        QualitativeTestLine,
-        QuantitativeTestLine,
+        EquipmentTemplate,
+        Template,
+        EquipmentTest,
+        Test,
         module='asset_quality_control_equipment', type_='model')

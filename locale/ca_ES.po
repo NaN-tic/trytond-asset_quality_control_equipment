@@ -54,25 +54,73 @@ msgctxt "field:asset-quality.proof.method,write_uid:"
 msgid "Write User"
 msgstr "Usuari modificació"
 
+msgctxt "field:asset-quality.template,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:asset-quality.template,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:asset-quality.template,equipment:"
+msgid "Equipment"
+msgstr "Equip"
+
+msgctxt "field:asset-quality.template,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:asset-quality.template,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:asset-quality.template,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:asset-quality.template,write_date:"
+msgid "Write Date"
+msgstr "Data modificación"
+
+msgctxt "field:asset-quality.template,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:asset-quality.test,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:asset-quality.test,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:asset-quality.test,equipment:"
+msgid "Equipment"
+msgstr "Equip"
+
+msgctxt "field:asset-quality.test,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:asset-quality.test,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:asset-quality.test,test:"
+msgid "Test"
+msgstr "Test"
+
+msgctxt "field:asset-quality.test,write_date:"
+msgid "Write Date"
+msgstr "Data modificación"
+
+msgctxt "field:asset-quality.test,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
 msgctxt "field:quality.proof.method,equipments:"
 msgid "Equipments"
 msgstr "Equips"
-
-msgctxt "field:quality.qualitative.template.line,equipment:"
-msgid "Equipment"
-msgstr "Equip"
-
-msgctxt "field:quality.qualitative.test.line,equipment:"
-msgid "Equipment"
-msgstr "Equip"
-
-msgctxt "field:quality.quantitative.template.line,equipment:"
-msgid "Equipment"
-msgstr "Equip"
-
-msgctxt "field:quality.quantitative.test.line,equipment:"
-msgid "Equipment"
-msgstr "Equip"
 
 msgctxt "help:asset,proof_methods:"
 msgid "The Quality Proof Methods that can be done with this equipment."
@@ -86,6 +134,14 @@ msgstr "Els equips que es poden utilitzar per a realitzar aquesta prova."
 msgctxt "model:asset-quality.proof.method,name:"
 msgid "Asset - Quality Proof Method"
 msgstr "Actiu - Mètode de prova de qualitat"
+
+msgctxt "model:asset-quality.template,name:"
+msgid "Equipment - Quality Template"
+msgstr "Equip - Plantilla de qualitat"
+
+msgctxt "model:asset-quality.test,name:"
+msgid "Equipment - Quality Test"
+msgstr "Equip - Test de qualitat"
 
 msgctxt "model:ir.action,name:act_asset_quality_control_equipment"
 msgid "Quality Control Equipments"

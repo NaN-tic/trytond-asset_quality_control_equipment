@@ -119,20 +119,9 @@ class TestCase(unittest.TestCase):
             qualitative_tmpl_line.name = 'Line 1'
             qualitative_tmpl_line.proof = qualitative_proof
             qualitative_tmpl_line.method = qualitative_proof.methods[0]
-            qualitative_tmpl_line.equipment = used_equipment
             qualitative_tmpl_line.valid_value = (
                 qualitative_proof.methods[0].possible_values[0])
-            template.quantitative_lines = []
-            quantitative_tmpl_line = self.quantitative_template_line()
-            template.quantitative_lines.append(quantitative_tmpl_line)
-            quantitative_tmpl_line.name = 'Line 1'
-            quantitative_tmpl_line.proof = quantitative_proof
-            quantitative_tmpl_line.method = quantitative_proof.methods[0]
-            quantitative_tmpl_line.equipment = used_equipment
-            quantitative_tmpl_line.unit = unit
-            quantitative_tmpl_line.unit_range = unit
-            quantitative_tmpl_line.min_value = 1.00
-            quantitative_tmpl_line.max_value = 2.00
+            template.equipments = [used_equipment]
             template.save()
 
             test = self.test()

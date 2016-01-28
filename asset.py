@@ -25,10 +25,10 @@ class Asset:
         if qc_equipment not in cls.type.selection:
             cls.type.selection.append(qc_equipment)
         cls._error_messages.update({
-                'equipment_used_in_test_line': (
+                'equipment_used_in_test': (
                     'You cannot delete the next Quality Control Equipments '
                     'because they are used in some Quality Control Test: %s'),
-                'equipment_used_in_template_line': (
+                'equipment_used_in_template': (
                     'You cannot delete the next Quality Control Equipments '
                     'because they are used in some Quality Control Template: '
                     '%s'),
@@ -37,28 +37,23 @@ class Asset:
     @classmethod
     def delete(cls, assets):
         pool = Pool()
-        QualitativeTestLine = pool.get('quality.qualitative.test.line')
-        QuantitativeTestLine = pool.get('quality.quantitative.test.line')
-        QualitativeTemplateLine = pool.get('quality.qualitative.template.line')
-        QuantitativeTemplateLine = pool.get(
-            'quality.quantitative.template.line')
+        Test = pool.get('quality.test')
+        Template = pool.get('quality.template')
 
         to_check = [a for a in assets if a.type == 'quality_control_equipment']
         if to_check:
-            for Proxy in (QualitativeTestLine, QuantitativeTestLine):
-                n_test_lines = Proxy.search([
-                        ('equipment', 'in', [a.id for a in to_check]),
-                        ], count=True)
-                if n_test_lines:
-                    cls.raise_user_error('equipment_used_in_test_line',
-                        ", ".join([a.rec_name for a in to_check]))
-            for Proxy in (QualitativeTemplateLine, QuantitativeTemplateLine):
-                n_template_lines = Proxy.search([
-                        ('equipment', 'in', [a.id for a in to_check]),
-                        ], count=True)
-                if n_template_lines:
-                    cls.raise_user_error('equipment_used_in_template_line',
-                        ", ".join([a.rec_name for a in to_check]))
+            n_test_lines = Test.search([
+                    ('equipments', 'in', [a.id for a in to_check]),
+                    ], count=True)
+            if n_test_lines:
+                cls.raise_user_error('equipment_used_in_test',
+                    ", ".join([a.rec_name for a in to_check]))
+            n_template_lines = Template.search([
+                    ('equipments', 'in', [a.id for a in to_check]),
+                    ], count=True)
+            if n_template_lines:
+                cls.raise_user_error('equipment_used_in_template',
+                    ", ".join([a.rec_name for a in to_check]))
         super(Asset, cls).delete(assets)
 
 
