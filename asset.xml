@@ -13,7 +13,9 @@
         		id="act_asset_quality_control_equipment">
             <field name="name">Quality Control Equipments</field>
             <field name="res_model">asset</field>
-            <field name="domain">[('type', '=', 'quality_control_equipment')]</field>
+            <field name="domain"
+                eval="[('type', '=', 'quality_control_equipment')]"
+                pyson="1"/>
             <field name="context">{'type': 'quality_control_equipment'}</field>
         </record>
         <record model="ir.action.act_window.view" id="act_asset_vehicle_view1">
@@ -26,7 +28,7 @@
             <field name="act_window"
             	ref="act_asset_quality_control_equipment"/>
             <field name="sequence" eval="20"/>
-            <field name="view" ref="asset.asset_view_form"/>/>
+            <field name="view" ref="asset.asset_view_form"/>
         </record>
 
         <!-- Menus -->
