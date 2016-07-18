@@ -79,6 +79,9 @@ class Test:
                 methods.add(line.method.id)
         return list(methods)
 
-    def set_template_vals(self):
-        super(Test, self).set_template_vals()
-        self.equipments = self.template.equipments
+    def apply_template_values(self):
+        super(Test, self).apply_template_values()
+        equipments = []
+        for template in self.templates:
+            equipments.extend(Template.equipments)
+        self.equipments = equipments
