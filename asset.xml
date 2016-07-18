@@ -16,7 +16,9 @@
             <field name="domain"
                 eval="[('type', '=', 'quality_control_equipment')]"
                 pyson="1"/>
-            <field name="context">{'type': 'quality_control_equipment'}</field>
+            <field name="context"
+                eval="{'type': 'quality_control_equipment'}"
+                pyson="1"/>
         </record>
         <record model="ir.action.act_window.view" id="act_asset_vehicle_view1">
             <field name="act_window"
