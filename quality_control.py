@@ -83,5 +83,5 @@ class Test:
         super(Test, self).apply_template_values()
         equipments = []
         for template in self.templates:
-            equipments.extend(Template.equipments)
+            equipments.extend(template.equipments)
         self.equipments = equipments
