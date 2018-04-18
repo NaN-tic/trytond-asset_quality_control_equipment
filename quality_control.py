@@ -6,11 +6,12 @@ from trytond.pyson import Eval
 
 __all__ = ['ProofMethod', 'EquipmentTemplate', 'Template', 'EquipmentTest',
     'Test']
-__metaclass__ = PoolMeta
 
 
 class ProofMethod:
     __name__ = 'quality.proof.method'
+    __metaclass__ = PoolMeta
+
     equipments = fields.Many2Many('asset-quality.proof.method',
         'proof_method', 'asset', 'Equipments', domain=[
             ('type', '=', 'quality_control_equipment'),
@@ -21,6 +22,7 @@ class ProofMethod:
 class EquipmentTemplate(ModelSQL):
     'Equipment - Quality Template'
     __name__ = 'asset-quality.template'
+    __metaclass__ = PoolMeta
 
     equipment = fields.Many2One('asset', 'Equipment', required=True,
         select=True, ondelete='CASCADE')
@@ -30,6 +32,8 @@ class EquipmentTemplate(ModelSQL):
 
 class Template:
     __name__ = 'quality.template'
+    __metaclass__ = PoolMeta
+
     equipments = fields.Many2Many('asset-quality.template', 'template',
         'equipment', 'Equipments',
         domain=[
@@ -61,6 +65,7 @@ class EquipmentTest(ModelSQL):
 
 class Test:
     __name__ = 'quality.test'
+    __metaclass__ = PoolMeta
     equipments = fields.Many2Many('asset-quality.test', 'test', 'equipment',
         'Equipments',
         domain=[

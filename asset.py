@@ -5,11 +5,12 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 
 __all__ = ['Asset', 'AssetProofMethod']
-__metaclass__ = PoolMeta
 
 
 class Asset:
     __name__ = 'asset'
+    __metaclass__ = PoolMeta
+
     proof_methods = fields.Many2Many('asset-quality.proof.method', 'asset',
         'proof_method', 'Quality Proof Methods', states={
             'invisible': Eval('type', '') != 'quality_control_equipment',
