@@ -78,8 +78,8 @@ class TestCase(ModuleTestCase):
             # Create Quality Template
             quality_template, = QualityTemplate.create([{
                         'name': 'Template 1',
-                        'internal_description': u'Internal description',
-                        'external_description': u'External description',
+                        'internal_description': 'Internal description',
+                        'external_description': 'External description',
                         'qualitative_lines': [('create', [{
                                         'name': 'Line 1',
                                         'proof': qualitative_proof.id,

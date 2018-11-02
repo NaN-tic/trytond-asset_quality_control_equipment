@@ -8,9 +8,8 @@ __all__ = ['ProofMethod', 'EquipmentTemplate', 'Template', 'EquipmentTest',
     'Test']
 
 
-class ProofMethod:
+class ProofMethod(metaclass=PoolMeta):
     __name__ = 'quality.proof.method'
-    __metaclass__ = PoolMeta
 
     equipments = fields.Many2Many('asset-quality.proof.method',
         'proof_method', 'asset', 'Equipments', domain=[
@@ -19,10 +18,9 @@ class ProofMethod:
         help='The Equipments that can be used to do this proof.')
 
 
-class EquipmentTemplate(ModelSQL):
+class EquipmentTemplate(ModelSQL, metaclass=PoolMeta):
     'Equipment - Quality Template'
     __name__ = 'asset-quality.template'
-    __metaclass__ = PoolMeta
 
     equipment = fields.Many2One('asset', 'Equipment', required=True,
         select=True, ondelete='CASCADE')
@@ -30,9 +28,8 @@ class EquipmentTemplate(ModelSQL):
         select=True, ondelete='CASCADE')
 
 
-class Template:
+class Template(metaclass=PoolMeta):
     __name__ = 'quality.template'
-    __metaclass__ = PoolMeta
 
     equipments = fields.Many2Many('asset-quality.template', 'template',
         'equipment', 'Equipments',
@@ -63,9 +60,8 @@ class EquipmentTest(ModelSQL):
         select=True, ondelete='CASCADE')
 
 
-class Test:
+class Test(metaclass=PoolMeta):
     __name__ = 'quality.test'
-    __metaclass__ = PoolMeta
     equipments = fields.Many2Many('asset-quality.test', 'test', 'equipment',
         'Equipments',
         domain=[

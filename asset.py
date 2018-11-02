@@ -7,9 +7,8 @@ from trytond.pyson import Eval
 __all__ = ['Asset', 'AssetProofMethod']
 
 
-class Asset:
+class Asset(metaclass=PoolMeta):
     __name__ = 'asset'
-    __metaclass__ = PoolMeta
 
     proof_methods = fields.Many2Many('asset-quality.proof.method', 'asset',
         'proof_method', 'Quality Proof Methods', states={
