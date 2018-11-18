@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -43,7 +43,7 @@ msgid "Quality Proof Method"
 msgstr "Método de prueba de calidad"
 
 msgctxt "field:asset-quality.proof.method,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:asset-quality.proof.method,write_date:"
@@ -71,7 +71,7 @@ msgid "ID"
 msgstr "Identificador"
 
 msgctxt "field:asset-quality.template,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:asset-quality.template,template:"
@@ -103,7 +103,7 @@ msgid "ID"
 msgstr "Identificador"
 
 msgctxt "field:asset-quality.test,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:asset-quality.test,test:"
@@ -121,6 +121,22 @@ msgstr "Usuario modificación"
 msgctxt "field:quality.proof.method,equipments:"
 msgid "Equipments"
 msgstr "Equipos"
+
+msgctxt "field:quality.template,equipments:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:quality.template,methods:"
+msgid "Proof Methods"
+msgstr ""
+
+msgctxt "field:quality.test,equipments:"
+msgid "Equipments"
+msgstr "Equipos"
+
+msgctxt "field:quality.test,methods:"
+msgid "Proof Methods"
+msgstr ""
 
 msgctxt "help:asset,proof_methods:"
 msgid "The Quality Proof Methods that can be done with this equipment."
