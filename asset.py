@@ -3,6 +3,8 @@
 from trytond.model import ModelSQL, fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['Asset', 'AssetProofMethod']
 
@@ -24,15 +26,6 @@ class Asset(metaclass=PoolMeta):
             'Quality Control Equipment')
         if qc_equipment not in cls.type.selection:
             cls.type.selection.append(qc_equipment)
-        cls._error_messages.update({
-                'equipment_used_in_test': (
-                    'You cannot delete the next Quality Control Equipments '
-                    'because they are used in some Quality Control Test: %s'),
-                'equipment_used_in_template': (
-                    'You cannot delete the next Quality Control Equipments '
-                    'because they are used in some Quality Control Template: '
-                    '%s'),
-                })
 
     @classmethod
     def delete(cls, assets):
@@ -46,14 +39,16 @@ class Asset(metaclass=PoolMeta):
                     ('equipments', 'in', [a.id for a in to_check]),
                     ], count=True)
             if n_test_lines:
-                cls.raise_user_error('equipment_used_in_test',
-                    ", ".join([a.rec_name for a in to_check]))
+                raise UserError(gettext(
+                    'asset_quality_control_equipment.equipment_used_in_test',
+                    test=", ".join([a.rec_name for a in to_check])))
             n_template_lines = Template.search([
                     ('equipments', 'in', [a.id for a in to_check]),
                     ], count=True)
             if n_template_lines:
-                cls.raise_user_error('equipment_used_in_template',
-                    ", ".join([a.rec_name for a in to_check]))
+                raise UserError(gettext(
+                    'asset_quality_control_equipment.equipment_used_in_template',
+                    test=", ".join([a.rec_name for a in to_check])))
         super(Asset, cls).delete(assets)
 
 
