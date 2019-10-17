@@ -2,22 +2,6 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:asset:"
-msgid ""
-"You cannot delete the next Quality Control Equipments because they are used "
-"in some Quality Control Template: %s"
-msgstr ""
-"No puede eliminar los siguientes Equipos de control de calidad porque se "
-"usan en alguna plantilla de control de calidad: %s"
-
-msgctxt "error:asset:"
-msgid ""
-"You cannot delete the next Quality Control Equipments because they are used "
-"in some Quality Control Test: %s"
-msgstr ""
-"No puede eliminar los siguientes Equipos de control de calidad porque se "
-"usan en algun test de control de calidad: %s"
-
 msgctxt "field:asset,proof_methods:"
 msgid "Quality Proof Methods"
 msgstr "Métodos de prueba de calidad"
@@ -26,97 +10,25 @@ msgctxt "field:asset-quality.proof.method,asset:"
 msgid "Asset"
 msgstr "Activo"
 
-msgctxt "field:asset-quality.proof.method,create_date:"
-msgid "Create Date"
-msgstr "Fecha creación"
-
-msgctxt "field:asset-quality.proof.method,create_uid:"
-msgid "Create User"
-msgstr "Usuario creación"
-
-msgctxt "field:asset-quality.proof.method,id:"
-msgid "ID"
-msgstr "Identificador"
-
 msgctxt "field:asset-quality.proof.method,proof_method:"
 msgid "Quality Proof Method"
 msgstr "Método de prueba de calidad"
-
-msgctxt "field:asset-quality.proof.method,rec_name:"
-msgid "Record Name"
-msgstr "Nombre"
-
-msgctxt "field:asset-quality.proof.method,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:asset-quality.proof.method,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
-
-msgctxt "field:asset-quality.template,create_date:"
-msgid "Create Date"
-msgstr "Fecha de creación"
-
-msgctxt "field:asset-quality.template,create_uid:"
-msgid "Create User"
-msgstr "Usuario de creación"
 
 msgctxt "field:asset-quality.template,equipment:"
 msgid "Equipment"
 msgstr "Equipo"
 
-msgctxt "field:asset-quality.template,id:"
-msgid "ID"
-msgstr "Identificador"
-
-msgctxt "field:asset-quality.template,rec_name:"
-msgid "Record Name"
-msgstr "Nombre"
-
 msgctxt "field:asset-quality.template,template:"
 msgid "Template"
 msgstr "Plantilla"
-
-msgctxt "field:asset-quality.template,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:asset-quality.template,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
-
-msgctxt "field:asset-quality.test,create_date:"
-msgid "Create Date"
-msgstr "Fecha de creación"
-
-msgctxt "field:asset-quality.test,create_uid:"
-msgid "Create User"
-msgstr "Usuario de creación"
 
 msgctxt "field:asset-quality.test,equipment:"
 msgid "Equipment"
 msgstr "Equipo"
 
-msgctxt "field:asset-quality.test,id:"
-msgid "ID"
-msgstr "Identificador"
-
-msgctxt "field:asset-quality.test,rec_name:"
-msgid "Record Name"
-msgstr "Nombre"
-
 msgctxt "field:asset-quality.test,test:"
 msgid "Test"
 msgstr "Test"
-
-msgctxt "field:asset-quality.test,write_date:"
-msgid "Write Date"
-msgstr "Fecha modificación"
-
-msgctxt "field:asset-quality.test,write_uid:"
-msgid "Write User"
-msgstr "Usuario modificación"
 
 msgctxt "field:quality.proof.method,equipments:"
 msgid "Equipments"
@@ -128,7 +40,7 @@ msgstr "Equipos"
 
 msgctxt "field:quality.template,methods:"
 msgid "Proof Methods"
-msgstr ""
+msgstr "Métodos de prueba"
 
 msgctxt "field:quality.test,equipments:"
 msgid "Equipments"
@@ -136,7 +48,7 @@ msgstr "Equipos"
 
 msgctxt "field:quality.test,methods:"
 msgid "Proof Methods"
-msgstr ""
+msgstr "Métodos de prueba"
 
 msgctxt "help:asset,proof_methods:"
 msgid "The Quality Proof Methods that can be done with this equipment."
