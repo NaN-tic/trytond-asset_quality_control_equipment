@@ -46,7 +46,7 @@ class TestCase(ModuleTestCase):
                         }])
 
             # Configure Quality Control
-            sequence, = Sequence.search([('code', '=', 'quality.test')])
+            sequence, = Sequence.search([('name', '=', 'Quality Control')])
             allowed_doc, = Model.search([('model', '=', 'asset')])
             CualityConfiguration.create([{
                         'allowed_documents': [('create', [{
