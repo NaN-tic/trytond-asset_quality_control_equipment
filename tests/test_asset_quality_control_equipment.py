@@ -6,7 +6,6 @@ from trytond.exceptions import UserError
 from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
 import trytond.tests.test_tryton
-from trytond.exceptions import UserError
 from trytond.modules.company.tests import create_company, set_company
 
 
