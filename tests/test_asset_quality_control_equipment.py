@@ -100,9 +100,11 @@ class TestCase(ModuleTestCase):
 
             Asset.delete([unused_equipment])
 
-            QualityTemplate.delete([quality_template])
             with self.assertRaises(UserError):
                 Asset.delete([used_equipment])
+
+            QualityTemplate.delete([quality_template])
+            Asset.delete([used_equipment])
 
 
 def suite():
