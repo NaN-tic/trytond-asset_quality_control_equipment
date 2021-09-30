@@ -39,10 +39,10 @@ class Template(metaclass=PoolMeta):
             ],
         depends=['methods'])
     methods = fields.Function(fields.One2Many('quality.proof.method', None,
-            'Proof Methods'), 'on_change_with_methods')
+            'Proof Methods'), getter='get_methods')
 
     @fields.depends('quantitative_lines', 'qualitative_lines')
-    def on_change_with_methods(self, name=None):
+    def get_methods(self, name=None):
         methods = set([])
         for line in self.quantitative_lines + self.qualitative_lines:
             if line.method:
