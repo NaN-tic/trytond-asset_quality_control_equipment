@@ -41,6 +41,8 @@ class Template(metaclass=PoolMeta):
     methods = fields.Function(fields.One2Many('quality.proof.method', None,
             'Proof Methods'), getter='get_methods')
 
+    # For me, the developer must use the Many2Many widget in such case.
+    # issue8739
     @fields.depends('quantitative_lines', 'qualitative_lines')
     def get_methods(self, name=None):
         methods = set([])
