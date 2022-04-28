@@ -1,16 +1,16 @@
-# The COPYRIGHT file at the top level of this repository contains the full
-# copyright notices and license terms.
-import unittest
+
+# This file is part of Tryton.  The COPYRIGHT file at the top level of
+# this repository contains the full copyright notices and license terms.
 
 from trytond.exceptions import UserError
 from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
-import trytond.tests.test_tryton
-from trytond.modules.company.tests import create_company, set_company
+from trytond.modules.company.tests import (CompanyTestMixin, create_company,
+    set_company)
 
 
-class TestCase(ModuleTestCase):
-    'Test module'
+class AssetQualityControlEquipmentTestCase(CompanyTestMixin, ModuleTestCase):
+    'Test AssetQualityControlEquipment module'
     module = 'asset_quality_control_equipment'
 
     @with_transaction()
@@ -107,7 +107,4 @@ class TestCase(ModuleTestCase):
             Asset.delete([used_equipment])
 
 
-def suite():
-    suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestCase))
-    return suite
+del ModuleTestCase
