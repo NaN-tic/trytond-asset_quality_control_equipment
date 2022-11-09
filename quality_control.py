@@ -23,9 +23,9 @@ class EquipmentTemplate(ModelSQL, metaclass=PoolMeta):
     __name__ = 'asset-quality.template'
 
     equipment = fields.Many2One('asset', 'Equipment', required=True,
-        select=True, ondelete='CASCADE')
+        ondelete='CASCADE')
     template = fields.Many2One('quality.template', 'Template', required=True,
-        select=True, ondelete='CASCADE')
+        ondelete='CASCADE')
 
 
 class Template(metaclass=PoolMeta):
@@ -57,9 +57,9 @@ class EquipmentTest(ModelSQL):
     __name__ = 'asset-quality.test'
 
     equipment = fields.Many2One('asset', 'Equipment', required=True,
-        select=True, ondelete='CASCADE')
+        ondelete='CASCADE')
     test = fields.Many2One('quality.test', 'Test', required=True,
-        select=True, ondelete='CASCADE')
+        ondelete='CASCADE')
 
 
 class Test(metaclass=PoolMeta):

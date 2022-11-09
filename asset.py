@@ -57,6 +57,6 @@ class AssetProofMethod(ModelSQL):
     __name__ = 'asset-quality.proof.method'
     asset = fields.Many2One('asset', 'Asset', domain=[
             ('type', '=', 'quality_control_equipment'),
-            ], ondelete='CASCADE', required=True, select=True)
+            ], ondelete='CASCADE', required=True)
     proof_method = fields.Many2One('quality.proof.method',
-        'Quality Proof Method', ondelete='CASCADE', required=True, select=True)
+        'Quality Proof Method', ondelete='CASCADE', required=True)
