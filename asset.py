@@ -40,15 +40,15 @@ class Asset(metaclass=PoolMeta):
                     ], count=True)
             if n_test_lines:
                 raise UserError(gettext(
-                    'asset_quality_control_equipment.equipment_used_in_test',
+                    'asset_quality_control_equipment.msg_equipment_used_in_test',
                     test=", ".join([a.rec_name for a in to_check])))
             n_template_lines = Template.search([
                     ('equipments', 'in', [a.id for a in to_check]),
                     ], count=True)
             if n_template_lines:
                 raise UserError(gettext(
-                    'asset_quality_control_equipment.equipment_used_in_template',
-                    test=", ".join([a.rec_name for a in to_check])))
+                    'asset_quality_control_equipment.msg_equipment_used_in_template',
+                    template=", ".join([a.rec_name for a in to_check])))
         super(Asset, cls).delete(assets)
 
 
