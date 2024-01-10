@@ -15,7 +15,7 @@ class Asset(metaclass=PoolMeta):
     proof_methods = fields.Many2Many('asset-quality.proof.method', 'asset',
         'proof_method', 'Quality Proof Methods', states={
             'invisible': Eval('type', '') != 'quality_control_equipment',
-            }, depends=['type'],
+            },
         help='The Quality Proof Methods that can be done with this equipment.')
 
     @classmethod
