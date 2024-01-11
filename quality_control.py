@@ -36,8 +36,7 @@ class Template(metaclass=PoolMeta):
         domain=[
             ('type', '=', 'quality_control_equipment'),
             ('proof_methods', 'in', Eval('methods', [])),
-            ],
-        depends=['methods'])
+            ])
     methods = fields.Function(fields.One2Many('quality.proof.method', None,
             'Proof Methods'), getter='get_methods')
 
@@ -69,8 +68,7 @@ class Test(metaclass=PoolMeta):
         domain=[
             ('type', '=', 'quality_control_equipment'),
             ('proof_methods', 'in', Eval('methods', [])),
-            ],
-        depends=['methods'])
+            ])
     methods = fields.Function(fields.One2Many('quality.proof.method', None,
             'Proof Methods'), 'on_change_with_methods')
 
