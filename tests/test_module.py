@@ -46,7 +46,7 @@ class AssetQualityControlEquipmentTestCase(CompanyTestMixin, ModuleTestCase):
 
             # Configure Quality Control
             sequence, = Sequence.search([('name', '=', 'Quality Control')])
-            allowed_doc, = Model.search([('model', '=', 'asset')])
+            allowed_doc, = Model.search([('name', '=', 'asset')])
             CualityConfiguration.create([{
                         'allowed_documents': [('create', [{
                                             'quality_sequence': sequence.id,
