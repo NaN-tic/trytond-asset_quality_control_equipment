@@ -9,10 +9,7 @@ from configparser import ConfigParser
 
 MODULE = 'asset_quality_control_equipment'
 PREFIX = 'nantic'
-MODULE2PREFIX = {
-    'asset': 'nantic',
-    'quality_control': 'nantic',
-    }
+MODULE2PREFIX = {}
 
 
 def read(fname):
@@ -49,27 +46,18 @@ for dep in info.get('depends', []):
         requires.append(get_require_version('%s_%s' % (prefix, dep)))
 requires.append(get_require_version('trytond'))
 
-tests_require = [get_require_version('proteus')]
+tests_require = [
+    get_require_version('proteus'),
+]
+
 series = '%s.%s' % (major_version, minor_version)
 if minor_version % 2:
     branch = 'default'
 else:
     branch = series
-dependency_links = [
-    ('hg+https://bitbucket.org/nantic/'
-        'trytond-asset@%(branch)s'
-        '#egg=nantic-asset-%(series)s' % {
-            'branch': branch,
-            'series': series,
-            }),
 
-    ('hg+https://bitbucket.org/nantic/'
-        'trytond-quality_control@%(branch)s'
-        '#egg=nantic-quality_control-%(series)s' % {
-            'branch': branch,
-            'series': series,
-            }),
-    ]
+dependency_links = []
+
 if minor_version % 2:
     # Add development index for testing with proteus
     dependency_links.append('https://trydevpi.tryton.org/')
@@ -88,8 +76,8 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         'trytond.modules.%s.tests' % MODULE,
         ],
     package_data={
-        'trytond.modules.%s' % MODULE: (info.get('xml', []) +
-             ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'tests/*.rst']),
+        'trytond.modules.%s' % MODULE: (info.get('xml', [])
+            + ['tryton.cfg', 'locale/*.po', 'tests/*.rst']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -128,3 +116,4 @@ setup(name='%s_%s' % (PREFIX, MODULE),
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
+    )
