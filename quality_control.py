@@ -37,8 +37,8 @@ class Template(metaclass=PoolMeta):
             ('type', '=', 'quality_control_equipment'),
             ('proof_methods', 'in', Eval('methods', [])),
             ])
-    methods = fields.Function(fields.One2Many('quality.proof.method', None,
-            'Proof Methods'), getter='get_methods')
+    methods = fields.Function(fields.Many2Many('quality.proof.method', None,
+            None, 'Proof Methods'), getter='get_methods')
 
     # For me, the developer must use the Many2Many widget in such case.
     # issue8739
@@ -69,8 +69,8 @@ class Test(metaclass=PoolMeta):
             ('type', '=', 'quality_control_equipment'),
             ('proof_methods', 'in', Eval('methods', [])),
             ])
-    methods = fields.Function(fields.One2Many('quality.proof.method', None,
-            'Proof Methods'), 'on_change_with_methods')
+    methods = fields.Function(fields.Many2Many('quality.proof.method', None,
+            None, 'Proof Methods'), 'on_change_with_methods')
 
     @fields.depends('quantitative_lines', 'qualitative_lines')
     def on_change_with_methods(self, name=None):
